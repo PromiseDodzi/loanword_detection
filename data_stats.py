@@ -42,5 +42,5 @@ def get_data_stats(input_data):
         print(f"  {lang}: {labels[1]}")
 
 if __name__=="__main__":
-    input_name="datasets\cleaned_data.tsv"
+    input_name="datasets/cleaned_data.tsv"
     get_data_stats(input_data=input_name)

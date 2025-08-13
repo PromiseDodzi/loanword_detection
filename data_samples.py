@@ -15,7 +15,7 @@ def create_balanced_sample(input_file, output_file, proportion):
         output_file (str): Path to output TSV file
         proportion (float): Proportion of data to sample (0.0 to 1.0)
     """
-    #read all data and organize by language and label
+  
     data_by_language_label = defaultdict(lambda: defaultdict(list))
 
     with open(input_file, "r", encoding="utf-8") as tsvfile:
@@ -27,7 +27,6 @@ def create_balanced_sample(input_file, output_file, proportion):
             label = row['label']
             data_by_language_label[language][label].append(row)
 
-    # sample from each language-label group proportionally
     sampled_rows = []
 
     for language in data_by_language_label:
@@ -36,7 +35,6 @@ def create_balanced_sample(input_file, output_file, proportion):
             sample_size = max(1, int(len(group_data) * proportion))
             sampled_rows.extend(random.sample(group_data, sample_size))
 
-    # Write sampled data to the output file
     with open(output_file, "w", encoding="utf-8", newline='') as outfile:
         writer = csv.DictWriter(outfile, fieldnames=fieldnames, delimiter='\t')
         writer.writeheader()
@@ -48,11 +46,9 @@ if __name__=="__main__":
 
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
-        print(f"Folder '{folder_path}' created.")
-    else:
-        print(f"Folder '{folder_path}' already exists.")
 
-    input_file="datasets\cleaned_data.tsv"
-    output_file=f"{folder_path}\sampled_data.tsv"
+
+    input_file="datasets/cleaned_data.tsv"
+    output_file=f"{folder_path}/sampled_data.tsv"
     proportion =0.5
     create_balanced_sample(input_file=input_file, output_file=output_file, proportion=proportion)
