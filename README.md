@@ -92,4 +92,4 @@ The repository is organized into three main components:
 ## Acknowledgments
 This research is funded by the European Research Council (ERC) under the European Union’s Horizon Europe Framework Programme (HORIZON), grant number 101045195.
 
-Special thanks to all members of the BANG project for their contributions, especially Aurore Montébran for all the encouragement.
+Special thanks to all members of the BANG project for their contributions, especially Aurore Montébran, who sadly passed away before the model was completed, for her constant encouragement.
