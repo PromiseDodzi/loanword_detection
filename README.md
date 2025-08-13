@@ -1,6 +1,6 @@
 # Loanword detection
 
-This repository accompanies the paper **"No Teacher, No cry: Unsupervised Loanword Detection"** by Promise Dodzi Kpoglu. The repository contains the complete  framework, including datasets, source code, and evaluation scripts used to validate the proposed methodology.
+This repository accompanies the paper **"Feature-Refined Unsupervised Model for Loanword Detection"** by Promise Dodzi Kpoglu. The repository contains the complete  framework, including datasets, source code, and evaluation scripts used to validate the proposed methodology.
 
 ---
 
