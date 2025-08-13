@@ -297,7 +297,6 @@ def run_UNS(input_link, output_link):
 
     for language, items in language_data.items():
         words = [w for _,w, _, _, _ in items]
-        word_pos_dict = {w: pos for _, w, pos, _, _ in items}
 
         print(f"Processing language: {language}")
         # Run borrowing detector

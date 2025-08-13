@@ -364,7 +364,6 @@ def align_and_score_by_concept(word_lang_list):
     Information:
         -relies on the `align_and_score` function above
     """
-    from collections import defaultdict
 
     lang_to_word = {}
     for word, lang in word_lang_list:
